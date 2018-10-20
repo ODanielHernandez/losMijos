@@ -19,13 +19,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<< HEAD
 
         <activity android:label="@string/app_name" android:name=".fragment_holder"/>
+        <activity android:label="@string/app_name" android:name=".agregarSuministro"/>
 
-=======
-        <activity android:name=".agregarSuministro"></activity>
->>>>>>> d7bea50a99c0b0c87ea88f2157a469bf24263d82
     </application>
 
 </manifest>
