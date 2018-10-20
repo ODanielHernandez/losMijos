@@ -26,9 +26,7 @@
         <activity
             android:name="com.losmijos.fragment_holder"
             android:label="@string/app_name" />
-        <activity
-            android:name="com.losmijos.agregarSuministro"
-            android:label="@string/app_name" />
+        <activity android:name="com.losmijos.agregarSuministro" />
     </application>
 
 </manifest>

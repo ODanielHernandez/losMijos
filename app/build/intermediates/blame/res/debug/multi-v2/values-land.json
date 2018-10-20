@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\hharm\\Downloads\\losMijos\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
+            "outputFile": "C:\\Users\\bubux\\Documents\\GitHub\\losMijos\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\hharm\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6f438a7b2abe4b44179cac0f47b61b40\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\bubux\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\25d114c0d4438265c1fc72dec99e0957\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\hharm\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\5d1ab0bb2c1e43b1ca7de79ed780c133\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\bubux\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\f11ac16f2868fd5292899b77e8c3ea99\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

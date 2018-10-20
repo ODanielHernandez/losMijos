@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\hharm\\Downloads\\losMijos\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v26\\values-v26.xml",
+            "outputFile": "C:\\Users\\bubux\\Documents\\GitHub\\losMijos\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v26\\values-v26.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\hharm\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6f438a7b2abe4b44179cac0f47b61b40\\res\\values-v26\\values-v26.xml",
+                    "source": "C:\\Users\\bubux\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\25d114c0d4438265c1fc72dec99e0957\\res\\values-v26\\values-v26.xml",
                     "from": {
                         "startLines": "2,3,4,8,12,16",
                         "startColumns": "4,4,4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\hharm\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\5d1ab0bb2c1e43b1ca7de79ed780c133\\res\\values-v26\\values-v26.xml",
+                    "source": "C:\\Users\\bubux\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\f11ac16f2868fd5292899b77e8c3ea99\\res\\values-v26\\values-v26.xml",
                     "from": {
                         "startLines": "2,6",
                         "startColumns": "4,4",
