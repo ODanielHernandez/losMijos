@@ -8,13 +8,7 @@ public class AdminBD extends SQLiteOpenHelper {
 
     final static String NOMBREBD = "BDdesastres.db";
     final static Integer VERSIONBBD = 1;
-    final static String NOMBRETABLAPELICULAS = "tblPeliculas";
-    final static String NOMBRECAMPOIDPELICULA = "idpelicula";
-    final static String NOMBRECAMPOTITULO = "titulo";
-    final static String NOMBRECAMPODURACION = "duracion";
-    final static String NOMBRECAMPOANIO = "anio";
-    final static String CREARTABLAPELICULAS = "CREATE TABLE "+NOMBRETABLAPELICULAS+" ("+NOMBRECAMPOIDPELICULA+" INTEGER PRIMARY KEY AUTOINCREMENT,"
-            +NOMBRECAMPOTITULO+" TEXT,"+NOMBRECAMPODURACION+" INTEGER,"+NOMBRECAMPOANIO+" INTEGER);";
+
 
     public AdminBD(Context context) {
         super(context, NOMBREBD, null, VERSIONBBD);
@@ -23,7 +17,7 @@ public class AdminBD extends SQLiteOpenHelper {
 
     public String crearTablas(String nombreTabla){
         String CREARTABLA= "CREATE TABLE "+nombreTabla+" (id INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                "articulo TEXT, cantidad INTEGER, importancia INTEGER);";
+                "articulo TEXT, importancia INTEGER, verificado INTEGER);";
         return CREARTABLA;
     }
     @Override
@@ -45,8 +39,8 @@ public class AdminBD extends SQLiteOpenHelper {
 
     }
 
-    public void insertarRegistro(SQLiteDatabase bd, String articulo, int cantidad, int importancia, String nombreTabla){
-        final String insertar = "INSERT INTO "+nombreTabla+"(articulo, cantidad, importancia) VALUES('"+articulo+"','"+cantidad+"','"+importancia+"');";
+    public void insertarRegistro(SQLiteDatabase bd, String BDarticulo, int BDimportancia, String nombreTabla){
+        final String insertar = "INSERT INTO "+nombreTabla+"(articulo, importancia, verificado) VALUES('"+BDarticulo+"','"+BDimportancia+"',0);";
         bd.execSQL(insertar);
     }
 
