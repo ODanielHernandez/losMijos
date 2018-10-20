@@ -1,26 +1,12 @@
 package com.losmijos;
 
-<<<<<<< HEAD
-import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-=======
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-<<<<<<< HEAD
-import android.view.View;
-import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
-    Button botoncito;
-=======
->>>>>>> d7bea50a99c0b0c87ea88f2157a469bf24263d82
+
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -32,27 +18,12 @@ public class MainActivity extends AppCompatActivity {
     private adaptador adaptador;
 
 
->>>>>>> origin/master
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-<<<<<<< HEAD
-        botoncito = findViewById(R.id.btn_siguiente);
-        botoncito.setOnClickListener(this);
 
-    }
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.btn_siguiente:
-                Intent i = new Intent(MainActivity.this, agregarSuministro.class);
-                startActivity(i);
-                break;
-        }
-=======
         lista = (ListView) findViewById(R.id.listaDestrastres);
         adaptador = new adaptador(this, getArrayListItems());
         lista.setAdapter(adaptador);
@@ -70,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
->>>>>>> origin/master
     }
 
     public ArrayList<entidad> getArrayListItems(){
