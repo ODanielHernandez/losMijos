@@ -45,4 +45,12 @@
 
     </ListView>
 
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/btnAdd"
+        android:src="@drawable/add"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="10dp"/>
+
 </FrameLayout>

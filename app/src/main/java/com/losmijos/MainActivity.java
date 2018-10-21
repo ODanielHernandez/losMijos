@@ -35,8 +35,8 @@ public class MainActivity extends AppCompatActivity{
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 Intent i = new Intent(MainActivity.this, fragment_holder.class);
-                //Integer idDesastre =listaDesastres.get(position).getId_desastre();
-                //i.putExtra("id", idDesastre);
+                Integer idDesastre =listaDesastres.get(position).getId_desastre();
+                i.putExtra("id", idDesastre);
                 MainActivity.this.startActivity(i);
             }
         });

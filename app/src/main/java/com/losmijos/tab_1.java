@@ -1,20 +1,23 @@
 package com.losmijos;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 
 
-public class tab_1 extends Fragment {
+public class tab_1 extends Fragment implements View.OnClickListener {
 
     private ListView listas;
+    ImageView btnAdd;
     ArrayList<entidad_mochila> listaArticulos;
     private adaptador_mochila adaptador;
 
@@ -36,15 +39,42 @@ public class tab_1 extends Fragment {
         listas.setAdapter(adaptador);
         listaArticulos = new ArrayList<entidad_mochila>();
 
+        btnAdd = v.findViewById(R.id.btnAdd);
+        btnAdd.setOnClickListener(this);
+
 
         return v;
     }
+
+
+    /*public void onClick(View view) {
+        Intent i = new Intent(getActivity().getApplicationContext(), agregarSuministro.class);
+        switch (view.getId()){
+            case R.id.btnAdd:
+                startActivity(i);
+                break;
+        }
+    }*/
+
 
     public ArrayList<entidad_mochila> getArrayListItems(){
         ArrayList<entidad_mochila> listItems = new ArrayList<>();
         listItems.add(new entidad_mochila("Agua","2", true));
 
         return listItems;
+    }
+
+    @Override
+    public void onClick(View v) {
+        Intent i = new Intent(getActivity().getApplicationContext(), agregarSuministro.class);
+        //Integer idDesastre =listaDesastres.get(position).getId_desastre();
+        //i.putExtra("id", idDesastre);
+        switch (v.getId()){
+            case R.id.btnAdd:
+                startActivity(i);
+                break;
+        }
+
     }
 
 

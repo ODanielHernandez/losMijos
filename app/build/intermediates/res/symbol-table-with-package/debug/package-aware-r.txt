@@ -841,6 +841,7 @@ id beginning
 id blocking
 id bottom
 id btnAceptar
+id btnAdd
 id btnCancelar
 id buttonPanel
 id cancel_action
@@ -856,6 +857,7 @@ id collapseActionView
 id container
 id contenido
 id contentPanel
+id contingencia
 id coordinator
 id custom
 id customPanel
