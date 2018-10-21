@@ -1,6 +1,7 @@
 package com.losmijos;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,7 +12,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
     private ListView lista;
     ArrayList<entidad> listaDesastres;
@@ -33,9 +34,9 @@ public class MainActivity extends AppCompatActivity {
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                Intent i = new Intent(MainActivity.this, tab_1.class);
-                Integer idDesastre =listaDesastres.get(position).getId_desastre();
-                i.putExtra("id", idDesastre);
+                Intent i = new Intent(MainActivity.this, fragment_holder.class);
+                //Integer idDesastre =listaDesastres.get(position).getId_desastre();
+                //i.putExtra("id", idDesastre);
                 MainActivity.this.startActivity(i);
             }
         });
@@ -49,13 +50,11 @@ public class MainActivity extends AppCompatActivity {
         listItems.add(new entidad(R.drawable.flood,"Inundaciones","Aguas no te vayas a mojar", 1));
         listItems.add(new entidad(R.drawable.earthquake,"Terremotos","Choque de placas tectonicas",2));
         listItems.add(new entidad(R.drawable.wind,"Huracan","Viene el viento y tira las casas",3));
-        listItems.add(new entidad(R.drawable.forest_fire,"Incendio Forestal","Fuego en nuestros bosques",4));
-        listItems.add(new entidad(R.drawable.tornado,"Tornado","Vientorrazo que se lleva todo",5));
-        listItems.add(new entidad(R.drawable.tsunami,"Tsunami","Olas gigantes chocan",6));
-        listItems.add(new entidad(R.drawable.temperature,"Temperaturas extremas","Muy caliente",7));
-        listItems.add(new entidad(R.drawable.landslide,"Deslizamiento de tierra","Montaña, colina o cerro se está cayendo",8));
-        listItems.add(new entidad(R.drawable.drought,"Sequía","Se está secando la tierra",9));
-        listItems.add(new entidad(R.drawable.volcano,"Erupciones volcanicas","Un volcan está apunto de eyacular",10));
+        listItems.add(new entidad(R.drawable.tornado,"Tornado","Vientorrazo que se lleva todo",4));
+        listItems.add(new entidad(R.drawable.tsunami,"Tsunami","Olas gigantes chocan",5));
+        listItems.add(new entidad(R.drawable.temperature,"Temperaturas extremas","Muy caliente",6));
+        listItems.add(new entidad(R.drawable.drought,"Sequía","Se está secando la tierra",7));
+        listItems.add(new entidad(R.drawable.volcano,"Erupciones volcanicas","Un volcan está apunto de eyacular",8));
 
 
 

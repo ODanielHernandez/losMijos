@@ -8,7 +8,7 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 
-public class fragment_holder extends AppCompatActivity implements tab_1.OnFragmentInteractionListener {
+public class fragment_holder extends AppCompatActivity implements tab_1.OnFragmentInteractionListener,tab_2.OnFragmentInteractionListener {
 
 
     @Override
