@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\hharm\\Downloads\\losMijos\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-uz\\values-uz.xml",
+            "outputFile": "C:\\Users\\hp pavilion\\Documents\\GitHub\\losMijos\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-uz\\values-uz.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\hharm\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\ed7379d323e482e4f14ce698531dda2d\\res\\values-uz\\values-uz.xml",
+                    "source": "C:\\Users\\hp pavilion\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\80b4b7261e729aa759e7760a90b66007\\res\\values-uz\\values-uz.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\hharm\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\e821765f1c373bda1bcd9b8358d1d52d\\res\\values-uz\\values-uz.xml",
+                    "source": "C:\\Users\\hp pavilion\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1ecdb0517cfd69fb94298d67d4758ad6\\res\\values-uz\\values-uz.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
