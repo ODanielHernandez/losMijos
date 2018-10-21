@@ -10,14 +10,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Toast;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 
-public class tab_1 extends Fragment implements View.OnClickListener {
+public class tab_1 extends Fragment implements View.OnClickListener, Serializable {
 
     private ListView listas;
     ImageView btnAdd;
+    String value;
     ArrayList<entidad_mochila> listaArticulos;
     private adaptador_mochila adaptador;
 
@@ -34,6 +37,7 @@ public class tab_1 extends Fragment implements View.OnClickListener {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_tab_1, container, false);
 
+
         listas = (ListView) v.findViewById(R.id.listaArticulos);
         adaptador = new adaptador_mochila(getActivity().getApplicationContext(), getArrayListItems());
         listas.setAdapter(adaptador);
@@ -42,19 +46,13 @@ public class tab_1 extends Fragment implements View.OnClickListener {
         btnAdd = v.findViewById(R.id.btnAdd);
         btnAdd.setOnClickListener(this);
 
+        Integer variable = fragment_holder.valorFragmento.myvalue;
+
+
+        Toast.makeText(getActivity(),String.valueOf(variable),Toast.LENGTH_SHORT).show();
 
         return v;
     }
-
-
-    /*public void onClick(View view) {
-        Intent i = new Intent(getActivity().getApplicationContext(), agregarSuministro.class);
-        switch (view.getId()){
-            case R.id.btnAdd:
-                startActivity(i);
-                break;
-        }
-    }*/
 
 
     public ArrayList<entidad_mochila> getArrayListItems(){
@@ -67,8 +65,7 @@ public class tab_1 extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         Intent i = new Intent(getActivity().getApplicationContext(), agregarSuministro.class);
-        //Integer idDesastre =listaDesastres.get(position).getId_desastre();
-        //i.putExtra("id", idDesastre);
+        i.putExtra("id", value);
         switch (v.getId()){
             case R.id.btnAdd:
                 startActivity(i);

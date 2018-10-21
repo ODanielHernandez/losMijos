@@ -1,4 +1,4 @@
-#Sat Oct 20 23:35:46 MDT 2018
+#Sun Oct 21 14:03:10 MDT 2018
 base.0=C\:\\Users\\hharm\\Downloads\\losMijos\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 path.0=classes.dex
 renamed.0=classes.dex

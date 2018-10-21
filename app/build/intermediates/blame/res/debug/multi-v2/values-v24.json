@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\hp pavilion\\Documents\\GitHub\\losMijos\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
+            "outputFile": "C:\\Users\\hharm\\Downloads\\losMijos\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\hp pavilion\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1ecdb0517cfd69fb94298d67d4758ad6\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\hharm\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\e821765f1c373bda1bcd9b8358d1d52d\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\hp pavilion\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\fc3414d6c973d81836154e9f21e2f273\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\hharm\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\7edcecb2b5fce40c72de3f55d08a94fa\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

@@ -9,14 +9,17 @@ import android.widget.AdapterView;
 
 
 import android.widget.ListView;
+import android.widget.Toast;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity implements Serializable {
 
     private ListView lista;
     ArrayList<entidad> listaDesastres;
     private adaptador adaptador;
+    Integer idDesastre;
 
 
     @Override
@@ -34,15 +37,17 @@ public class MainActivity extends AppCompatActivity{
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                idDesastre = position;
                 Intent i = new Intent(MainActivity.this, fragment_holder.class);
-                Integer idDesastre =listaDesastres.get(position).getId_desastre();
                 i.putExtra("id", idDesastre);
+
                 MainActivity.this.startActivity(i);
             }
         });
 
 
     }
+
 
     public ArrayList<entidad> getArrayListItems(){
         ArrayList<entidad> listItems = new ArrayList<>();
