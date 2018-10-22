@@ -49,7 +49,7 @@ public class tab_1 extends Fragment implements View.OnClickListener, Serializabl
         Integer variable = fragment_holder.valorFragmento.myvalue;
 
 
-        Toast.makeText(getActivity(),String.valueOf(variable),Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getActivity(),String.valueOf(variable),Toast.LENGTH_SHORT).show();
 
         return v;
     }
@@ -57,8 +57,10 @@ public class tab_1 extends Fragment implements View.OnClickListener, Serializabl
 
     public ArrayList<entidad_mochila> getArrayListItems(){
         ArrayList<entidad_mochila> listItems = new ArrayList<>();
-        listItems.add(new entidad_mochila("Agua","2", true));
-
+        listItems.add(new entidad_mochila("Agua","1", false));
+        listItems.add(new entidad_mochila("Comida en lata","1", false));
+        listItems.add(new entidad_mochila("Lampara","2", false));
+        listItems.add(new entidad_mochila("Ropa extra","3", false));
         return listItems;
     }
 

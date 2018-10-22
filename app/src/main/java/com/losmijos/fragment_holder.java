@@ -1,6 +1,8 @@
 package com.losmijos;
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -30,7 +32,7 @@ public class fragment_holder extends AppCompatActivity implements tab_1.OnFragme
         value = extras.getInt("id");
 
 
-        Toast.makeText(this,String.valueOf(valorFragmento.myvalue),Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this,String.valueOf(valorFragmento.myvalue),Toast.LENGTH_SHORT).show();
 
         /*Bundle bundle = new Bundle();
         bundle.putString("ids", String.valueOf(value));
@@ -47,6 +49,7 @@ public class fragment_holder extends AppCompatActivity implements tab_1.OnFragme
         //New tabs here
         tabLayout.addTab(tabLayout.newTab().setText("Mochila"));
         tabLayout.addTab(tabLayout.newTab().setText("Plan de contingencia"));
+        tabLayout.setTabTextColors(ColorStateList.valueOf(Color.rgb(48,63,159)));
 
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 

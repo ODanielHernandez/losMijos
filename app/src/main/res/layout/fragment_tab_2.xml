@@ -9,7 +9,12 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Estamos aquí y se están cometiendo muchas injusticias"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textSize="20sp"
+        android:text="- Mueva al segundo piso o a un lugar alto los elementos de más valor.
+           \n - Esté preparado para evacuar su hogar.
+           \n - Ubique los elementos tóxicos en gabinetes cerrados y fuera del alcance del agua."
         android:id="@+id/contingencia"
         />
 
