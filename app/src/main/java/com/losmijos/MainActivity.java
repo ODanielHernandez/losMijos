@@ -1,6 +1,7 @@
 package com.losmijos;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements Serializable {
     private adaptador adaptador;
     Integer idDesastre;
 
+    AdminBD baseDatos = new AdminBD(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +47,8 @@ public class MainActivity extends AppCompatActivity implements Serializable {
             }
         });
 
+        SQLiteDatabase baseD = baseDatos.getWritableDatabase();
+        //baseDatos.insertarRegistro(baseD, "guantes", 2, "inundaciones");
 
     }
 

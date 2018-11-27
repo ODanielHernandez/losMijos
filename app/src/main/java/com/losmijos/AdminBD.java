@@ -1,6 +1,7 @@
 package com.losmijos;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -22,14 +23,12 @@ public class AdminBD extends SQLiteOpenHelper {
     }
     @Override
     public void onCreate(SQLiteDatabase bd) {
-        bd.execSQL(crearTablas("incendios"));
+        bd.execSQL(crearTablas("inundaciones"));
         bd.execSQL(crearTablas("terremotos"));
         bd.execSQL(crearTablas("huracanes"));
-        bd.execSQL(crearTablas("incendiosForestales"));
         bd.execSQL(crearTablas("tornados"));
         bd.execSQL(crearTablas("tsunamis"));
         bd.execSQL(crearTablas("temperaturasExtremas"));
-        bd.execSQL(crearTablas("deslizamientoDeTierra"));
         bd.execSQL(crearTablas("sequias"));
         bd.execSQL(crearTablas("erupcionVolcanica"));
     }
@@ -47,5 +46,11 @@ public class AdminBD extends SQLiteOpenHelper {
     public void eliminarRegistro(SQLiteDatabase bd, String id, String nombreTabla){
         final String eliminar = "DELETE FROM "+nombreTabla+" WHERE id='"+id+"';";
         bd.execSQL(eliminar);
+    }
+
+    public Cursor consultaTotal(SQLiteDatabase bd, String nomDesastre){
+        String consultaSQL = "SELECT * FROM "+nomDesastre+";";
+        Cursor t = bd.rawQuery(consultaSQL, null);
+        return t;
     }
 }

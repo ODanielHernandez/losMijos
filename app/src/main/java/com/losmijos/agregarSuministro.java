@@ -1,12 +1,14 @@
 package com.losmijos;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -16,6 +18,11 @@ public class agregarSuministro extends AppCompatActivity implements View.OnClick
     Integer value;
     String[] numero = {"1","2","3","4","5"};
     ImageView add, cancel;
+    EditText etSuministro;
+
+    AdminBD baseDatos = new AdminBD(this);
+
+    String[] tablas = {"inundaciones","terremotos","huracanes","tornados","tsunamis","temperaturasExtremas","sequias","erupcionVolvanica"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +32,7 @@ public class agregarSuministro extends AppCompatActivity implements View.OnClick
         Bundle extras = this.getIntent().getExtras();
         value = extras.getInt("id");
 
+        etSuministro = findViewById(R.id.txtSuministro);
         spinner = (Spinner) findViewById(R.id.spinner);
 
         add = (ImageView) findViewById(R.id.btnAceptar);
@@ -52,15 +60,19 @@ public class agregarSuministro extends AppCompatActivity implements View.OnClick
 
     @Override
     public void onClick(View v) {
-        Intent i = new Intent(agregarSuministro.this, fragment_holder.class);
-        i.putExtra("id", value);
+        //Intent i = new Intent(agregarSuministro.this, fragment_holder.class);
+        //i.putExtra("id", value);
         switch (v.getId()){
             case R.id.btnCancelar:
-                startActivity(i);
+                finish();
+                //startActivity(i);
                 break;
             case R.id.btnAceptar:
-                //Aquí va la cosa pa agregar
-                startActivity(i);
+                //Aquí va la cosa pa agregar en la base de datos
+                SQLiteDatabase baseD = baseDatos.getWritableDatabase();
+                baseDatos.insertarRegistro(baseD, etSuministro.getText().toString(), spinner.getSelectedItemPosition()+1, tablas[value]);
+                finish();
+                //startActivity(i);
                 break;
         }
     }

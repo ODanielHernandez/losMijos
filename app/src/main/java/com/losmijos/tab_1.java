@@ -2,6 +2,8 @@ package com.losmijos;
 
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -37,17 +39,62 @@ public class tab_1 extends Fragment implements View.OnClickListener, Serializabl
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_tab_1, container, false);
 
+        AdminBD baseDatos = new AdminBD(getContext());
+        SQLiteDatabase baseD = baseDatos.getWritableDatabase();
+        ArrayList<entidad_mochila> listItems = new ArrayList<>();
+        Integer idDesastre = fragment_holder.valorFragmento.myvalue;
+        String nomDesastre = "";
+        switch (idDesastre){
+            case 0:
+                nomDesastre = "inundaciones";
+                listItems.add(new entidad_mochila("Agua","1", false));
+                listItems.add(new entidad_mochila("Comida en lata","1", false));
+                listItems.add(new entidad_mochila("Lampara","2", false));
+                listItems.add(new entidad_mochila("Ropa extra","3", false));
+                break;
+            case 1:
+                nomDesastre = "terremotos";
+                break;
+            case 2:
+                nomDesastre = "huracanes";
+                break;
+            case 3:
+                nomDesastre = "tornados";
+                break;
+            case 4:
+                nomDesastre = "tsunamis";
+                break;
+            case 5:
+                nomDesastre = "temperaturasExtremas";
+                break;
+            case 6:
+                nomDesastre = "sequias";
+                break;
+            case 7:
+                nomDesastre = "erupcionVolcanica";
+                break;
+        }
+        Cursor tabla = baseDatos.consultaTotal(baseD, nomDesastre);
+        try {
+            int numregistro = tabla.getCount();
+            tabla.moveToFirst();
+            for (int i = 0; i < numregistro; i++){
+                listItems.add(new entidad_mochila(tabla.getString(1), tabla.getString(2),false));
+                tabla.moveToNext();
+            }
+        }catch (Exception e){
+        }
 
         listas = (ListView) v.findViewById(R.id.listaArticulos);
-        adaptador = new adaptador_mochila(getActivity().getApplicationContext(), getArrayListItems());
+        adaptador = new adaptador_mochila(getActivity().getApplicationContext(), listItems);
+        //adaptador.notifyDataSetChanged();
         listas.setAdapter(adaptador);
         listaArticulos = new ArrayList<entidad_mochila>();
 
         btnAdd = v.findViewById(R.id.btnAdd);
         btnAdd.setOnClickListener(this);
 
-        Integer variable = fragment_holder.valorFragmento.myvalue;
-
+        //Integer idDesastre = fragment_holder.valorFragmento.myvalue;
 
         //Toast.makeText(getActivity(),String.valueOf(variable),Toast.LENGTH_SHORT).show();
 
@@ -61,6 +108,7 @@ public class tab_1 extends Fragment implements View.OnClickListener, Serializabl
         listItems.add(new entidad_mochila("Comida en lata","1", false));
         listItems.add(new entidad_mochila("Lampara","2", false));
         listItems.add(new entidad_mochila("Ropa extra","3", false));
+
         return listItems;
     }
 
