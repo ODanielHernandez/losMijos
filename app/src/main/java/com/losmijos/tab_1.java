@@ -39,6 +39,22 @@ public class tab_1 extends Fragment implements View.OnClickListener, Serializabl
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_tab_1, container, false);
 
+        listas = v.findViewById(R.id.listaArticulos);
+
+        btnAdd = v.findViewById(R.id.btnAdd);
+        btnAdd.setOnClickListener(this);
+
+        //Integer idDesastre = fragment_holder.valorFragmento.myvalue;
+
+        //Toast.makeText(getActivity(),String.valueOf(variable),Toast.LENGTH_SHORT).show();
+
+        return v;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
         AdminBD baseDatos = new AdminBD(getContext());
         SQLiteDatabase baseD = baseDatos.getWritableDatabase();
         ArrayList<entidad_mochila> listItems = new ArrayList<>();
@@ -85,22 +101,14 @@ public class tab_1 extends Fragment implements View.OnClickListener, Serializabl
         }catch (Exception e){
         }
 
-        listas = (ListView) v.findViewById(R.id.listaArticulos);
         adaptador = new adaptador_mochila(getActivity().getApplicationContext(), listItems);
-        //adaptador.notifyDataSetChanged();
         listas.setAdapter(adaptador);
+
         listaArticulos = new ArrayList<entidad_mochila>();
+        adaptador.notifyDataSetChanged();
 
-        btnAdd = v.findViewById(R.id.btnAdd);
-        btnAdd.setOnClickListener(this);
-
-        //Integer idDesastre = fragment_holder.valorFragmento.myvalue;
-
-        //Toast.makeText(getActivity(),String.valueOf(variable),Toast.LENGTH_SHORT).show();
-
-        return v;
+        //Toast.makeText(getActivity(), "Saludos desde onResume", Toast.LENGTH_SHORT).show();
     }
-
 
     public ArrayList<entidad_mochila> getArrayListItems(){
         ArrayList<entidad_mochila> listItems = new ArrayList<>();
