@@ -32,7 +32,7 @@ public class fragment_holder extends AppCompatActivity implements tab_1.OnFragme
         value = extras.getInt("id");
 
 
-        //Toast.makeText(this,String.valueOf(valorFragmento.myvalue),Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, value.toString(),Toast.LENGTH_SHORT).show();
 
         /*Bundle bundle = new Bundle();
         bundle.putString("ids", String.valueOf(value));
@@ -81,7 +81,6 @@ public class fragment_holder extends AppCompatActivity implements tab_1.OnFragme
     public static class valorFragmento{
         public static Integer myvalue = value;
     }
-
 
     @Override
     public void onFragmentInteraction(Uri uri) {

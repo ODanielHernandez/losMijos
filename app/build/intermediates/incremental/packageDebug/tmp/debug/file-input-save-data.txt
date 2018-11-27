@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Nov 26 22:19:38 MST 2018
+#Mon Nov 26 22:55:22 MST 2018
 0.baseType=DIRECTORY
 0.base=C\:\\Users\\OK\\Documents\\GitHub\\losMijos\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 0.path=classes.dex

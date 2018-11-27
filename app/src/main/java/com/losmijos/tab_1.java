@@ -22,7 +22,7 @@ public class tab_1 extends Fragment implements View.OnClickListener, Serializabl
 
     private ListView listas;
     ImageView btnAdd;
-    String value;
+    Integer value = fragment_holder.value;
     ArrayList<entidad_mochila> listaArticulos;
     private adaptador_mochila adaptador;
 
@@ -58,7 +58,8 @@ public class tab_1 extends Fragment implements View.OnClickListener, Serializabl
         AdminBD baseDatos = new AdminBD(getContext());
         SQLiteDatabase baseD = baseDatos.getWritableDatabase();
         ArrayList<entidad_mochila> listItems = new ArrayList<>();
-        Integer idDesastre = fragment_holder.valorFragmento.myvalue;
+        Integer idDesastre = value;
+        //Toast.makeText(getActivity().getApplicationContext(), idDesastre.toString(), Toast.LENGTH_SHORT).show();
         String nomDesastre = "";
         switch (idDesastre){
             case 0:
