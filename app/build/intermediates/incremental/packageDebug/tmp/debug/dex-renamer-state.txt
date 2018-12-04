@@ -1,4 +1,4 @@
-#Mon Nov 26 22:55:21 MST 2018
+#Tue Dec 04 11:00:26 MST 2018
 base.0=C\:\\Users\\OK\\Documents\\GitHub\\losMijos\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 path.0=classes.dex
 renamed.0=classes.dex

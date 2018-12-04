@@ -22,7 +22,7 @@ public class agregarSuministro extends AppCompatActivity implements View.OnClick
 
     AdminBD baseDatos = new AdminBD(this);
 
-    String[] tablas = {"inundaciones","terremotos","huracanes","tornados","tsunamis","temperaturasExtremas","sequias","erupcionVolvanica"};
+    String[] tablas = {"inundaciones","terremotos","huracanes","tornados","tsunamis","temperaturasExtremas","sequias","erupcionVolcanica"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
